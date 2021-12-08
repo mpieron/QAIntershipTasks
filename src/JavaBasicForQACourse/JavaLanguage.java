@@ -78,7 +78,7 @@ public class JavaLanguage {
     (e)  Field l is accessible in all classes in other packages.
     (f)  Field l is accessible in subclasses only in other packages.
 
---  Solution: b, d but in all subclasses, not ony in other package
+--  Solution: b, d
 
     7. Class Initializers and Constructors
 
@@ -225,7 +225,7 @@ public class JavaLanguage {
     (d)  Members of an interface are never static.
     (e)  Members of an interface can always be declared static.
 
---  Solution: a,c
+--  Solution: a,b
 
     Task 3
     Which of these field declarations are legal within the body of an interface?
