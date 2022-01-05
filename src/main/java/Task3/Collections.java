@@ -21,8 +21,7 @@ public class Collections {
     }
 
     private static List<String> splitOnWords(String lyric){
-        return Stream.of(lyric.replaceAll(", ", " ").replaceAll("[\\[\\](){}]","").replaceAll("\n", " ").split(" "))
-                .filter(x -> !x.equals(",") && !x.equals("\n"))
+        return Stream.of(lyric.replaceAll(", ", " ").replaceAll("[\\[\\](){}]","").split(" "))
                 .map(String::toLowerCase)
                 .toList();
     }
@@ -40,6 +39,7 @@ public class Collections {
         }
     }
 
+//  can use  System.out.println(lyric.stream().distinct().toList().toString()); instead
     private static void removeDuplicateAndPrint(List<String> lyric){
         TreeSet<String> words = new TreeSet<>(lyric);
         System.out.println(words.stream().toList().toString());
