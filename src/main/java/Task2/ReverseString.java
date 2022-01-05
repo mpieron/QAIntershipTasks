@@ -1,4 +1,4 @@
-package Task2;
+package main.java.Task2;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
