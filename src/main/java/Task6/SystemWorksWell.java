@@ -38,7 +38,7 @@ public class SystemWorksWell {
                 return false;
 
             User user = (User) other;
-            return (user.age == this.age);
+            return (user.age == this.age && user.name.equals(this.name));
         }
     }
 
