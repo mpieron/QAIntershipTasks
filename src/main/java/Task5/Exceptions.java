@@ -8,15 +8,20 @@ import java.util.stream.Stream;
 
 public class Exceptions {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args)  {
 
-        Scanner scanner = new Scanner(new File("src/main/resources/YellowSubmarine.txt"));
-        StringBuilder song = new StringBuilder();
+        try(Scanner scanner = new Scanner(new File("src/main/resources/YellowSubmarine.txt"))) {
 
-        while (scanner.hasNext())
-            song.append(scanner.nextLine()).append(" ");
+            StringBuilder song = new StringBuilder();
 
-        printUniqueWords(song.toString());
+            while (scanner.hasNext())
+                song.append(scanner.nextLine()).append(" ");
+
+            printUniqueWords(song.toString());
+        }
+        catch (FileNotFoundException ex){
+            ex.printStackTrace();
+        }
     }
 
     private static void printUniqueWords(String text){
